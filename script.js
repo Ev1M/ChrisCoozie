@@ -1,7 +1,8 @@
-var i = 31;
+var i = 3;
 var cookie = 0;
-document.getElementById('cookie').style.display='none'
-document.getElementById('input').style.display='none'
+document.getElementById('cookie').style.display='none';
+document.getElementById('input').style.display='none';
+var formEl = document.getElementById("form");
 
 
 function startTimer() {
@@ -35,8 +36,15 @@ function startTimer() {
 
 }
 
+
 function startCookie() {
     document.getElementById('body').style.backgroundImage='url(http://localhost/Cookie/slap.gif)'
     cookie++;
     document.getElementById('displayClicks').innerHTML = "Clicks:" + cookie;
 }
+
+function SendRes() {
+    sendData(formEl, 6, cookie);
+    console.log(cookie)
+}
+

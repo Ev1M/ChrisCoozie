@@ -11,6 +11,9 @@
     <title>Chris Rocker</title>
 </head>
 <body id="body">
+
+<script src="http://db.cookie/js/webapi.js"></script>
+
 <div class="container">
   <div class="Tittel"><h1> Chris Rock Clicker! </h1></div>
 
@@ -28,6 +31,7 @@
        <div id="input">
        <input name="navn" placeholder="Navn...">
        <input name="tlf" placeholder="Tlf..."> 
+       <button onclick="SendRes()" > Send inn </button>
         </div>
     </form>     
 
@@ -40,10 +44,3 @@
 <script src="script.js"></script>
 </html>
 
-<script src="http://api.cookie/js/webapi.js"></script>
-<script>
-  // Funksjon som sender data til web api-en (fra webapi.js).
-  // Kalles når tiden går ut formen er der det står navn og tlf
-    // CID-en (Klient id) finnes i vedlagt bilde.
-  sendData(formEl, CID, clicks);
-</script>
