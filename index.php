@@ -19,7 +19,7 @@
       <div class="center">
     <button class="start" id="start" onclick="startTimer()"> Start! </button>
     <h1 id="displayTimer" ></h1>
-    <button id="cookie" onclick="startCookie()" > Cookie </button>
+    <button id="cookie" onclick="startCookie()" > Hit </button>
     <h1 id="displayClicks" ></h1>
     
     <form action="" method="post" id="form">
@@ -39,3 +39,11 @@
 </body>
 <script src="script.js"></script>
 </html>
+
+<script src="http://api.cookie/js/webapi.js"></script>
+<script>
+  // Funksjon som sender data til web api-en (fra webapi.js).
+  // Kalles når tiden går ut formen er der det står navn og tlf
+    // CID-en (Klient id) finnes i vedlagt bilde.
+  sendData(formEl, CID, clicks);
+</script>
